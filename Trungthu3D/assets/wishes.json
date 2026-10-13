@@ -1,0 +1,92 @@
+{
+  "users": {
+    "123": {
+      "name": "Gửi cậu",
+      "tag": "Trung thu an lành",
+      "music": "./assets/1.mp3",
+      "messages": [
+        "Chúc cậu và gia đình một mùa Trung Thu đoàn viên, tràn ngập niềm vui và hạnh phúc!",
+        "Cầu chúc cho mọi nguyện ước của cậu đêm nay sẽ trở thành hiện thực.",
+        "Trăng tròn ấm áp, chúc tình bạn và tình yêu của chúng ta mãi bền chặt."
+      ],
+      "images": [
+        "./assets/1.jpg",
+        "./assets/2.jpg",
+        "./assets/3.jpg"
+      ]
+    },
+    "sangp": {
+      "name": "Gửi Dịuuo",
+      "tag": "Trung thu an lành",
+      "music": "./assets/bongtrang.mp3",
+      "messages": [
+        "Dù có bận thế nào cũng phải nhớ ăn uống đầy đủ, đừng bỏ bữa nha bạn nhỏ 🌷",
+        "Trung thu anh viết tình ca Hợp âm thì ít, hợp em thì nhiều",
+        "Thu mình đi chung đôi, Để đôi mình đi Trung Thu.",
+        "Nếu em mệt thì ngồi nghỉ vs anh, Anh sẽ lắng nghe những đều đã làm em mệt",
+        "Trên thế giới này, có rất nhiều chuyện có thể làm anh vui. Ví dụ như chụp được một tấm ảnh đẹp cho em, ví dụ dạo phố trong khi thời tiết thật đẹp, ví dụ như khi nhìn thấy em cười, ví dụ như hôm nào tụi mình đi ăn 🙄",
+        "Có những ngày chỉ cần tin nhắn từ em là đủ làm anh vui cả ngày có biết không",
+        "Tôi không cần những ngày tháng rực rỡ nhất, chỉ cần trong những ngày bình thường nhất, vẫn có em ngồi bên cạnh.",
+        "Đừng gồng mình quá, vì có một người luôn săn sàng xoa dịu mọi điều cho em..🌷",
+        "Điều gì cần em cứ gọi\nAnh sẽ ơi em cả ngàn điều",
+        "Đây là ôm, là hôn, là hơi thở\nĐây là yêu, là thương, là trăn trở\nTôi mượn vần, vay chữ gửi đến em"
+      ],
+      "images": [
+        "./assets/sp/1.jpg",
+        "./assets/sp/2.jpg",
+        "./assets/sp/3.jpg",
+        "./assets/sp/4.jpg",
+        "./assets/sp/5.jpg",
+        "./assets/sp/6.jpg",
+        "./assets/sp/7.jpg",
+        "./assets/sp/8.jpg",
+        "./assets/sp/9.jpg",
+        "./assets/sp/10.jpg"
+      ]
+    },
+    "nguoithuong": {
+      "name": "Gửi người thương",
+      "tag": "Trung thu an lành",
+      "music": "./assets/bongtrang.mp3",
+      "messages": [
+        "Chúc người thương và gia đình một mùa Trung Thu đoàn viên, tràn ngập niềm vui và hạnh phúc!",
+        "Cầu chúc cho mọi nguyện ước của người thương đêm nay sẽ trở thành hiện thực.",
+        "Trăng tròn ấm áp, chúc tình bạn và tình yêu của chúng ta mãi bền chặt."
+      ],
+      "images": [
+        "./assets/1.jpg",
+        "./assets/2.jpg",
+        "./assets/3.jpg"
+      ]
+    },
+    "baotram": {
+      "name": "Gửi Bảo Trân",
+      "tag": "Trung thu an lành",
+      "music": "./assets/bongtrang.mp3",
+      "messages": [
+        " 🏮 Chúc Bảo Trân trung thu vui vẻ ",
+        " 🏮 mong đứa trẻ ấy sẽ luôn nở nụ cười nhé và hạnh phúc nhé",
+        " 🏮 chúc bạn và gia đình có một mùa trung thu vv",
+        " 🏮 qua bao năm đi trăng nửa hy vọng nụ cười vẫn ở đó"
+      ],
+      "images": [
+        "./assets/4.jpg"
+      ]
+    },
+    "lnam": {
+      "name": "Gửi người thương",
+      "tag": "Trung thu an lành",
+      "music": "./assets/bongtrang.mp3",
+      "messages": [
+        "Chúc người thương và gia đình một mùa Trung Thu đoàn viên, tràn ngập niềm vui và hạnh phúc!",
+        "Cầu chúc cho mọi nguyện ước của người thương đêm nay sẽ trở thành hiện thực.",
+        "ebe của anh chỉ việc hạnh phúc , còn mọi chuyện để anh lo"
+      ],
+      "images": [
+        "./assets/ln/1.jpg",
+        "./assets/ln/2.jpg",
+        "./assets/ln/3.jpg"
+      ]
+    }
+  }
+}

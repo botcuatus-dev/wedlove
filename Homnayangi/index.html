@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Devpan">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Lovely – nơi chia sẻ yêu thương." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="lập trình, thiết kế web, javascript, html, css">
+    <link rel="icon" href="https://raw.githubusercontent.com/Panbap/anh/refs/heads/main/icon1.png" type="image/png">
+    <title>Hôm Nay Ăn Gì? 🍜</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style> </style>
+</head>
+
+<body>
+    <dev id="Devpan"></dev>
+    <script>
+
+(function(d){
+            if(!d.__cssInjected){
+                d.__cssInjected = true;
+                const css = `:root{--bg:#FFF8F0;--bg2:#FFF0E0;--bg3:#FFE8CC;--surface:#FFFFFF;--surface2:#FFF8F0;--border:rgba(0,0,0,0.08);--border2:rgba(0,0,0,0.14);--text:#1A1108;--text2:#6B5B45;--text3:#9B8B78;--accent:#FF4D1C;--accent2:#FF8C42;--accent-dim:rgba(255,77,28,0.12);--green:#1E9E6B;--green-dim:rgba(30,158,107,0.12);--blue:#2563EB;--blue-dim:rgba(37,99,235,0.10);--gold:#D4970A;--gold-dim:rgba(212,151,10,0.12);--purple:#7C3AED;--purple-dim:rgba(124,58,237,0.10);--pink:#DB2777;--pink-dim:rgba(219,39,119,0.10);--radius:16px;--radius-sm:10px;--shadow:0 4px 24px rgba(0,0,0,0.08);--shadow-lg:0 12px 48px rgba(0,0,0,0.14);--font-head:'Baloo 2',cursive;--font-body:'Be Vietnam Pro',sans-serif;--t:0.2s ease;}[data-theme="dark"]{--bg:#120D07;--bg2:#1C1409;--bg3:#261B0E;--surface:#221810;--surface2:#2E2016;--border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.14);--text:#F5EDE0;--text2:#C4A882;--text3:#8B7355;--accent:#FF6B3D;--accent2:#FFA060;--accent-dim:rgba(255,107,61,0.15);--green:#28C87E;--green-dim:rgba(40,200,126,0.12);--blue:#60A5FA;--blue-dim:rgba(96,165,250,0.12);--gold:#F0B72A;--gold-dim:rgba(240,183,42,0.12);--purple:#A78BFA;--purple-dim:rgba(167,139,250,0.12);--pink:#F472B6;--pink-dim:rgba(244,114,182,0.12);--shadow:0 4px 24px rgba(0,0,0,0.3);--shadow-lg:0 12px 48px rgba(0,0,0,0.5);}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}body{font-family:var(--font-body);background:var(--bg);color:var(--text);min-height:100vh;transition:background .3s,color .3s;overflow-x:hidden;}.app{max-width:560px;margin:0 auto;padding:20px 16px 60px;}.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}.logo{font-family:var(--font-head);font-size:26px;font-weight:800;color:var(--accent);}.logo span{color:var(--text);}.topbar-actions{display:flex;gap:8px;}.icon-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--border2);background:var(--surface);color:var(--text2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;transition:var(--t);}.icon-btn:hover{background:var(--bg2);}.icon-btn.active{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);}.weather-bar{background:linear-gradient(135deg,var(--blue-dim),var(--green-dim));border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 14px;display:flex;align-items:center;gap:12px;margin-bottom:16px;cursor:pointer;transition:var(--t);}.weather-bar:hover{box-shadow:var(--shadow);}.weather-emoji{font-size:30px;flex-shrink:0;}.weather-info{flex:1;}.weather-loc{font-size:11px;color:var(--text3);font-weight:500;}.weather-desc{font-size:13px;font-weight:600;color:var(--text);}.weather-suggest{font-size:12px;color:var(--blue);margin-top:2px;}.tabs{display:flex;gap:4px;background:var(--bg2);border-radius:14px;padding:4px;margin-bottom:18px;}.tab-btn{flex:1;padding:8px 2px;border:none;background:transparent;border-radius:10px;font-family:var(--font-body);font-size:12px;font-weight:500;color:var(--text3);cursor:pointer;transition:var(--t);}.tab-btn.active{background:var(--surface);color:var(--accent);font-weight:700;box-shadow:var(--shadow);}.pane{display:none;animation:fadeUp .22s ease;}.pane.active{display:block;}@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin-bottom:14px;}.card-title{font-family:var(--font-head);font-size:14px;font-weight:700;color:var(--text2);margin-bottom:10px;display:flex;align-items:center;gap:6px;}.filter-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:14px;}.filter-grid.two{grid-template-columns:1fr 1fr;}select{width:100%;padding:9px 28px 9px 12px;border:1px solid var(--border2);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font-family:var(--font-body);font-size:13px;cursor:pointer;outline:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%239B8B78' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;transition:border-color var(--t);}select:focus{border-color:var(--accent);}.wheel-section{text-align:center;margin-bottom:16px;}.wheel-outer{position:relative;width:300px;height:300px;margin:0 auto 18px;display:inline-block;}#wheel{width:300px;height:300px;border-radius:50%;display:block;box-shadow:0 8px 24px rgba(0,0,0,0.14);will-change:transform;}.wheel-pointer{position:absolute;top:-18px;left:50%;transform:translateX(-50%);z-index:10;filter:drop-shadow(0 3px 5px rgba(0,0,0,0.25));}.wheel-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;background:var(--surface);border-radius:50%;border:3px solid var(--bg);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;font-size:20px;z-index:5;}.spin-btn{width:100%;padding:16px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;border-radius:var(--radius);font-family:var(--font-head);font-size:20px;font-weight:800;cursor:pointer;transition:transform .15s,box-shadow .15s;box-shadow:0 6px 20px rgba(255,77,28,0.35);position:relative;overflow:hidden;margin-bottom:14px;}.spin-btn:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,77,28,0.45);}.spin-btn:active:not(:disabled){transform:translateY(0);}.spin-btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none;}.spin-btn .ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,0.3);transform:scale(0);animation:ripple .6s linear;}@keyframes ripple{to{transform:scale(4);opacity:0;}}.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px;}.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 10px;text-align:center;}.stat-val{font-family:var(--font-head);font-size:24px;font-weight:800;color:var(--text);}.stat-lbl{font-size:11px;color:var(--text3);margin-top:2px;font-weight:500;}.modal-wrap{position:fixed;inset:0;background:rgba(0,0,0,0.55);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;z-index:200;opacity:0;pointer-events:none;transition:opacity .25s;padding:20px;}.modal-wrap.open{opacity:1;pointer-events:auto;}.modal{background:var(--surface);border-radius:24px;padding:32px 28px;text-align:center;max-width:340px;width:100%;transform:scale(.85) translateY(20px);transition:transform .3s cubic-bezier(.34,1.56,.64,1);box-shadow:var(--shadow-lg);border:1px solid var(--border);}.modal-wrap.open .modal{transform:scale(1) translateY(0);}.modal-emoji{font-size:64px;margin-bottom:8px;display:block;animation:bounce .5s ease .2s both;}@keyframes bounce{0%{transform:scale(0)}60%{transform:scale(1.2)}100%{transform:scale(1)}}.modal-label{font-size:12px;color:var(--text3);margin-bottom:4px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;}.modal-food{font-family:var(--font-head);font-size:32px;font-weight:800;color:var(--text);margin-bottom:4px;}.modal-meta{font-size:13px;color:var(--text3);margin-bottom:8px;}.modal-price{display:inline-block;padding:4px 14px;border-radius:99px;font-size:12px;font-weight:600;margin-bottom:22px;}.modal-price.cheap{background:var(--green-dim);color:var(--green);}.modal-price.rich{background:var(--gold-dim);color:var(--gold);}.modal-price.all{background:var(--blue-dim);color:var(--blue);}.modal-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}.btn{padding:12px;border-radius:var(--radius-sm);border:1px solid var(--border2);background:var(--surface2);color:var(--text);font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer;transition:var(--t);}.btn:hover{background:var(--bg2);}.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;box-shadow:0 4px 14px rgba(255,77,28,0.3);}.btn.primary:hover{box-shadow:0 6px 20px rgba(255,77,28,0.45);}.btn.share{grid-column:1/-1;background:var(--green-dim);color:var(--green);border-color:transparent;}.btn.share:hover{background:var(--green);color:#fff;}.suggest-hero{background:linear-gradient(135deg,var(--accent-dim),var(--gold-dim));border:1px solid var(--border);border-radius:var(--radius);padding:28px 20px 24px;text-align:center;margin-bottom:14px;position:relative;overflow:hidden;}.suggest-hero::before{content:'';position:absolute;width:200px;height:200px;border-radius:50%;background:var(--accent-dim);top:-80px;right:-60px;pointer-events:none;}.suggest-hero-empty{color:var(--text3);font-size:14px;}.suggest-hero-empty .empty-icon{font-size:48px;margin-bottom:10px;}.sg-emoji-big{font-size:72px;margin-bottom:10px;display:block;animation:popIn .4s cubic-bezier(.34,1.56,.64,1);}@keyframes popIn{from{transform:scale(0) rotate(-10deg)}to{transform:scale(1) rotate(0deg)}}.sg-food-name{font-family:var(--font-head);font-size:30px;font-weight:800;color:var(--text);margin-bottom:6px;line-height:1.2;}.sg-food-desc{font-size:13px;color:var(--text2);margin-bottom:12px;}.sg-tags{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;}.sg-tag{font-size:11px;padding:4px 12px;border-radius:99px;background:var(--surface);color:var(--text2);border:1px solid var(--border);font-weight:500;}.sg-actions{display:flex;gap:8px;justify-content:center;}.sg-btn{padding:10px 20px;border-radius:var(--radius-sm);border:1px solid var(--border2);background:var(--surface);color:var(--text);font-family:var(--font-body);font-size:13px;font-weight:600;cursor:pointer;transition:var(--t);}.sg-btn:hover{background:var(--bg2);}.sg-btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;}.filter-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:14px;}.filter-section-title{font-size:12px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px;}.chip-wrap{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}.chip-wrap:last-child{margin-bottom:0;}.chip{padding:7px 14px;border-radius:99px;border:1px solid var(--border2);background:var(--surface2);color:var(--text2);font-size:13px;font-weight:500;cursor:pointer;transition:var(--t);}.chip:hover{border-color:var(--accent);color:var(--accent);}.chip.active{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);font-weight:600;}.chip.mood-chip.active{background:var(--purple-dim);border-color:var(--purple);color:var(--purple);}.chip.taste-chip.active{background:var(--pink-dim);border-color:var(--pink);color:var(--pink);}.chip.time-chip.active{background:var(--gold-dim);border-color:var(--gold);color:var(--gold);}.suggest-cta{width:100%;padding:15px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;border-radius:var(--radius);font-family:var(--font-head);font-size:18px;font-weight:800;cursor:pointer;transition:transform .15s,box-shadow .15s;box-shadow:0 6px 20px rgba(255,77,28,.3);}.suggest-cta:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,77,28,.45);}.meal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:0;}.meal-card{border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:10px 6px;text-align:center;cursor:pointer;transition:var(--t);background:var(--surface2);}.meal-card:hover{border-color:var(--accent);}.meal-card.active{border-color:var(--accent);background:var(--accent-dim);}.meal-card .meal-icon{font-size:22px;margin-bottom:4px;}.meal-card .meal-lbl{font-size:11px;font-weight:600;color:var(--text2);}.meal-card.active .meal-lbl{color:var(--accent);}.history-item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);}.history-item:last-child{border-bottom:none;}.history-icon{width:36px;height:36px;border-radius:10px;background:var(--accent-dim);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}.history-info{flex:1;min-width:0;}.history-name{font-weight:600;font-size:14px;color:var(--text);}.history-sub{font-size:11px;color:var(--text3);margin-top:1px;}.history-badge{font-size:11px;padding:3px 8px;border-radius:99px;background:var(--bg2);color:var(--text3);flex-shrink:0;}.freq-row{display:flex;align-items:center;gap:8px;margin-bottom:8px;}.freq-name{font-size:12px;color:var(--text2);width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex-shrink:0;}.freq-bar-wrap{flex:1;height:10px;background:var(--bg2);border-radius:99px;overflow:hidden;}.freq-bar{height:100%;background:linear-gradient(to right,var(--accent),var(--accent2));border-radius:99px;transition:width .7s cubic-bezier(.34,1.2,.64,1);}.freq-count{font-size:12px;color:var(--text3);width:16px;text-align:right;}.streak-banner{background:linear-gradient(135deg,var(--gold-dim),var(--accent-dim));border:1px solid var(--gold);border-radius:var(--radius-sm);padding:12px 16px;display:flex;align-items:center;gap:12px;margin-bottom:14px;}.streak-num{font-family:var(--font-head);font-size:32px;font-weight:800;color:var(--gold);}.streak-title{font-weight:700;font-size:14px;color:var(--text);}.streak-sub{font-size:12px;color:var(--text3);}.section-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}.section-hdr h3{font-family:var(--font-head);font-size:15px;font-weight:700;color:var(--text2);}.link-btn{background:none;border:none;color:var(--accent);font-size:12px;font-weight:600;cursor:pointer;font-family:var(--font-body);}.link-btn:hover{text-decoration:underline;}.timer-display{font-family:var(--font-head);font-size:56px;font-weight:800;color:var(--accent);text-align:center;letter-spacing:3px;margin:12px 0;}.timer-label{font-size:13px;color:var(--text3);text-align:center;margin-bottom:10px;font-weight:500;}.timer-presets{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;}.preset-btn{padding:7px 13px;border-radius:99px;border:1px solid var(--border);background:var(--surface2);color:var(--text2);font-size:12px;cursor:pointer;transition:var(--t);font-family:var(--font-body);font-weight:500;}.preset-btn:hover{border-color:var(--accent);color:var(--accent);}.preset-btn.active{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);}.timer-controls{display:flex;gap:8px;justify-content:center;}.timer-btn{padding:11px 18px;border-radius:var(--radius-sm);border:1px solid var(--border2);background:var(--surface2);color:var(--text);font-family:var(--font-body);font-size:13px;font-weight:600;cursor:pointer;transition:var(--t);}.timer-btn:hover:not(:disabled){background:var(--bg2);}.timer-btn:disabled{opacity:.35;cursor:not-allowed;}.timer-btn.danger{border-color:transparent;background:var(--accent-dim);color:var(--accent);}.timer-btn.danger:hover{background:var(--accent);color:#fff;}.timer-progress{width:100%;height:6px;background:var(--bg2);border-radius:99px;margin-bottom:16px;overflow:hidden;}.timer-progress-bar{height:100%;background:linear-gradient(to right,var(--accent),var(--accent2));border-radius:99px;transition:width 1s linear;width:100%;}input[type=text]{width:100%;padding:10px 12px;border:1px solid var(--border2);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font-family:var(--font-body);font-size:13px;outline:none;transition:border-color var(--t);}input[type=text]:focus{border-color:var(--accent);}.add-btn{padding:10px 16px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius-sm);font-family:var(--font-body);font-size:13px;font-weight:600;cursor:pointer;transition:var(--t);}.add-btn:hover{background:var(--accent2);}.food-chip{display:inline-flex;align-items:center;gap:6px;padding:5px 10px 5px 12px;border-radius:99px;background:var(--surface2);border:1px solid var(--border);color:var(--text);font-size:12px;margin:3px;}.chip-x{width:18px;height:18px;border-radius:50%;background:var(--bg3);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--text3);padding:0;}.chip-x:hover{background:var(--accent);color:#fff;}.sound-wave{display:flex;align-items:center;gap:2px;height:16px;}.sound-wave span{display:block;width:3px;border-radius:2px;background:currentColor;animation:wave .8s ease-in-out infinite;}.sound-wave span:nth-child(1){height:6px;animation-delay:0s;}.sound-wave span:nth-child(2){height:12px;animation-delay:.15s;}.sound-wave span:nth-child(3){height:8px;animation-delay:.3s;}.sound-wave span:nth-child(4){height:14px;animation-delay:.1s;}.sound-wave.off span{animation:none;height:5px;opacity:.3;}@keyframes wave{0%,100%{transform:scaleY(.5)}50%{transform:scaleY(1)}}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--text);color:var(--surface);padding:12px 22px;border-radius:var(--radius);font-size:14px;font-weight:500;opacity:0;transition:all .3s cubic-bezier(.34,1.56,.64,1);z-index:999;pointer-events:none;white-space:nowrap;}.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}.confetti-piece{position:fixed;pointer-events:none;z-index:999;animation:cffall 1.5s ease-in forwards;}@keyframes cffall{0%{transform:translateY(-20px) rotate(0deg);opacity:1;}100%{transform:translateY(100vh) rotate(720deg);opacity:0;}}.empty{text-align:center;padding:30px 0;color:var(--text3);font-size:14px;}.empty-icon{font-size:40px;margin-bottom:8px;}@media(max-width:420px){.filter-grid{grid-template-columns:1fr 1fr;}.stats-grid{grid-template-columns:1fr 1fr 1fr;}.modal-food{font-size:26px;}.meal-grid{grid-template-columns:repeat(2,1fr);}}`;
+                if (window.CSSStyleSheet && CSSStyleSheet.prototype.replaceSync && 'adoptedStyleSheets' in d) {
+                    const s = new CSSStyleSheet();
+                    s.replaceSync(css);
+                    d.adoptedStyleSheets = [...d.adoptedStyleSheets, s];
+                } else {
+                    const t = d.createElement('style');
+                    t.textContent = css;
+                    d.head.appendChild(t);
+                }
+            }
+        })(document);
+        (function f(){const s=document.getElementById('sandbox')||document.body;s?s.append(document.createRange().createContextualFragment(`<div class="toast" id="toast"></div><!-- MODAL --><div class="modal-wrap" id="modal" onclick="handleModalClick(event)"><div class="modal" id="modal-box"><span class="modal-emoji" id="m-emoji">🍜</span><div class="modal-label">Món ngon dành cho bạn</div><div class="modal-food" id="m-food">...</div><div class="modal-meta" id="m-meta"></div><span class="modal-price" id="m-price">Dưới 50k</span><div class="modal-actions"><button class="btn" onclick="reroll()">🎲 Quay lại</button><button class="btn primary" onclick="accept()">✓ Chốt món!</button><button class="btn share" onclick="shareResult()">↗ Chia sẻ kết quả</button></div></div></div><div class="app"><!-- TOPBAR --><div class="topbar"><div class="logo">🍜 <span>Ăn Gì</span></div><div class="topbar-actions"><button class="icon-btn active" id="sound-btn" onclick="toggleSound()" title="Âm thanh"><div class="sound-wave" id="sound-wave"><span></span><span></span><span></span><span></span></div></button><button class="icon-btn" id="theme-btn" onclick="toggleTheme()" title="Đổi giao diện">🌙</button><button class="icon-btn" onclick="showInfo()" title="Hướng dẫn">?</button></div></div><!-- WEATHER --><div class="weather-bar" id="weather-bar" onclick="applyWeatherFilter()"><div class="weather-emoji" id="w-emoji">⏳</div><div class="weather-info"><div class="weather-loc" id="w-loc">Đang lấy thông tin thời tiết...</div><div class="weather-desc" id="w-desc"></div><div class="weather-suggest" id="w-suggest"></div></div></div><!-- TABS --><div class="tabs"><button class="tab-btn active" onclick="switchTab('wheel')">🎡 Quay</button><button class="tab-btn" onclick="switchTab('suggest')">💡 Gợi ý</button><button class="tab-btn" onclick="switchTab('history')">📊 Lịch sử</button><button class="tab-btn" onclick="switchTab('timer')">⏱ Đặt giờ</button><button class="tab-btn" onclick="switchTab('custom')">✏️ Tùy chỉnh</button></div><!-- PANE WHEEL --><div id="pane-wheel" class="pane active"><div class="card" style="padding:14px;"><div class="filter-grid"><select id="loc" onchange="initWheel()"><option value="HN">📍 Hà Nội</option><option value="DN">📍 Đà Nẵng</option><option value="SG">📍 Sài Gòn</option></select><select id="bud" onchange="initWheel()"><option value="all">💰 Mọi giá</option><option value="cheap">🟢 Dưới 50k</option><option value="rich">🟡 Trên 100k</option></select><select id="meal" onchange="initWheel()"><option value="all">🍽️ Mọi bữa</option><option value="morning">🌅 Sáng</option><option value="noon">☀️ Trưa</option><option value="evening">🌙 Tối</option><option value="snack">🍬 Ăn nhẹ</option></select></div><div class="wheel-section"><div class="wheel-outer"><!-- Pointer: mũi nhọn chỉ xuống vào bánh xe --><div class="wheel-pointer"><svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><!-- Mũi nhọn hướng xuống (▼) --><polygon points="15,28 4,6 26,6" fill="#FF4D1C" /><polygon points="15,28 4,6 26,6" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round" /></svg></div><canvas id="wheel" width="300" height="300"></canvas><div class="wheel-center" id="wheel-center">🎲</div></div></div><button class="spin-btn" id="spin-btn" onclick="spinWheel(event)">QUAY NGAY!</button></div><div class="stats-grid"><div class="stat-card"><div class="stat-val" id="sw-total">0</div><div class="stat-lbl">Tổng lần quay</div></div><div class="stat-card"><div class="stat-val" id="sw-today">0</div><div class="stat-lbl">Hôm nay</div></div><div class="stat-card"><div class="stat-val" id="sw-fav">—</div><div class="stat-lbl">Đi thôi</div></div></div></div><!-- PANE SUGGEST --><div id="pane-suggest" class="pane"><!-- Hero result card --><div class="suggest-hero" id="suggest-hero"><div class="suggest-hero-empty"><div class="empty-icon">✨</div><div style="font-size:16px;font-weight:600;color:var(--text2);margin-bottom:4px;">Chọn sở thích bên dưới</div><div style="font-size:13px;color:var(--text3);">Mình sẽ gợi ý món phù hợp nhất cho bạn!</div></div></div><!-- Filter card --><div class="filter-card"><!-- Meal type --><div class="filter-section-title">🍽️ Bữa ăn</div><div class="meal-grid" id="meal-grid"><div class="meal-card active" data-meal="all" onclick="selectMeal(this,'all')"><div class="meal-icon">🍽️</div><div class="meal-lbl">Tất cả</div></div><div class="meal-card" data-meal="morning" onclick="selectMeal(this,'morning')"><div class="meal-icon">🌅</div><div class="meal-lbl">Sáng</div></div><div class="meal-card" data-meal="noon" onclick="selectMeal(this,'noon')"><div class="meal-icon">☀️</div><div class="meal-lbl">Trưa</div></div><div class="meal-card" data-meal="evening" onclick="selectMeal(this,'evening')"><div class="meal-icon">🌙</div><div class="meal-lbl">Tối</div></div><div class="meal-card" data-meal="snack" onclick="selectMeal(this,'snack')"><div class="meal-icon">🍬</div><div class="meal-lbl">Ăn nhẹ</div></div></div></div><div class="filter-card"><!-- Mood --><div class="filter-section-title">😊 Tâm trạng hôm nay</div><div class="chip-wrap" id="mood-chips"></div><!-- Taste --><div class="filter-section-title">👅 Muốn ăn vị gì</div><div class="chip-wrap" id="taste-chips"></div><!-- Time --><div class="filter-section-title">⏱ Có bao nhiêu thời gian</div><div class="chip-wrap" id="time-chips"></div><button class="suggest-cta" onclick="suggest()">✨ Gợi ý ngay!</button></div></div><!-- PANE HISTORY --><div id="pane-history" class="pane"><div id="streak-area"></div><div class="stats-grid"><div class="stat-card"><div class="stat-val" id="h-total">0</div><div class="stat-lbl">Tổng lần</div></div><div class="stat-card"><div class="stat-val" id="h-unique">0</div><div class="stat-lbl">Món khác nhau</div></div><div class="stat-card"><div class="stat-val" id="h-streak">0</div><div class="stat-lbl">Ngày streak</div></div></div><div class="card"><div class="section-hdr"><h3>📈 Hay ăn nhất</h3></div><div id="freq-chart"></div></div><div class="card"><div class="section-hdr"><h3>🕐 Lịch sử gần đây</h3><button class="link-btn" onclick="clearHistory()">Xóa tất cả</button></div><div id="history-list"></div></div></div><!-- PANE TIMER --><div id="pane-timer" class="pane"><div class="card"><div class="card-title">⏱ Hẹn giờ đặt / nhận món</div><div class="timer-label" id="timer-label">Chọn thời gian hẹn giờ</div><div class="timer-presets" id="timer-presets"><button class="preset-btn" onclick="setTimer(5,this)">5 phút</button><button class="preset-btn" onclick="setTimer(10,this)">10 phút</button><button class="preset-btn" onclick="setTimer(15,this)">15 phút</button><button class="preset-btn" onclick="setTimer(20,this)">20 phút</button><button class="preset-btn" onclick="setTimer(30,this)">30 phút</button><button class="preset-btn" onclick="setTimer(45,this)">45 phút</button></div><div class="timer-progress"><div class="timer-progress-bar" id="timer-bar"></div></div><div class="timer-display" id="timer-display">00:00</div><div class="timer-controls"><button class="timer-btn" onclick="startTimer()" id="timer-start-btn">▶ Bắt đầu</button><button class="timer-btn" onclick="pauseTimer()" id="timer-pause-btn" disabled>⏸ Dừng</button><button class="timer-btn danger" onclick="resetTimer()">↺ Đặt lại</button></div></div><div class="card"><div class="card-title">📝 Ghi chú đơn hàng</div><textarea id="order-note" placeholder="Ghi chú: shipper gọi cửa, không hành, thêm tương ớt..." style="width:100%;min-height:100px;resize:vertical;border:1px solid var(--border2);border-radius:var(--radius-sm);padding:10px 12px;font-family:var(--font-body);font-size:13px;background:var(--surface);color:var(--text);outline:none;"></textarea><div style="margin-top:10px;display:flex;gap:8px;"><button class="btn" style="flex:1;font-size:13px;padding:9px;" onclick="copyNote()">📋 Copy</button><button class="btn primary" style="flex:1;font-size:13px;padding:9px;" onclick="shareOrder()">↗ Chia sẻ đơn</button></div></div></div><!-- PANE CUSTOM --><div id="pane-custom" class="pane"><div class="card"><div class="card-title">➕ Thêm món của bạn</div><div style="margin-bottom:8px;"><input type="text" id="custom-name" placeholder="Tên món ăn..." onkeydown="if(event.key==='Enter')addCustomFood()"></div><div class="filter-grid" style="margin-bottom:8px;"><select id="custom-city"><option value="HN">Hà Nội</option><option value="DN">Đà Nẵng</option><option value="SG">Sài Gòn</option></select><select id="custom-budget"><option value="cheap">Dưới 50k</option><option value="rich">Trên 100k</option></select><select id="custom-meal"><option value="morning">Bữa sáng</option><option value="noon">Bữa trưa</option><option value="evening">Bữa tối</option><option value="snack">Ăn nhẹ</option><option value="all">Mọi bữa</option></select></div><button class="add-btn" style="width:100%;padding:11px;" onclick="addCustomFood()">+ Thêm vào danh sách</button></div><div class="card"><div class="section-hdr"><h3>Danh sách món tùy chỉnh</h3></div><div id="custom-list"></div></div><div class="card" style="background:var(--blue-dim);"><div class="card-title">📥 Import / Export</div><div style="display:flex;gap:8px;"><button class="btn" style="flex:1;font-size:13px;padding:9px;" onclick="exportData()">⬇ Xuất dữ liệu</button><button class="btn" style="flex:1;font-size:13px;padding:9px;" onclick="document.getElementById('import-file').click()">⬆ Nhập dữ liệu</button><input type="file" id="import-file" accept=".json" style="display:none" onchange="importData(event)"></div></div></div></div><!-- /app -->`)):setTimeout(f,4)})();
+
+        /* ===== DATA CẬP NHẬT CHI TIẾT ===== */
+        const DB = {
+            HN: {
+                cheap: {
+                    morning: ["Xôi xéo", "Bánh mì pate", "Cháo sườn", "Bún ốc", "Phở gà", "Bánh cuốn nóng", "Bún mọc dọc mùng", "Xôi khúc", "Bánh khúc quân", "Mì vằn thắn"],
+                    noon: ["Bún đậu mắm tôm", "Bún chả", "Cơm rang dương châu", "Phở bò", "Bún bò Nam Bộ", "Cơm tấm Hà Nội", "Bún dọc mùng", "Bún thang", "Bánh đa cua", "Mì tôm chanh"],
+                    evening: ["Nem cuốn", "Bánh đa cua", "Bún bò", "Ốc luộc", "Chân gà nướng", "Lẩu riêu cua bắp bò", "Nộm bò khô", "Bánh tôm Hồ Tây", "Phở cuốn Ngũ Xá", "Chim quay"],
+                    snack: ["Bánh tráng trộn", "Chè thái", "Bánh rán mật", "Tào phớ", "Nộm bò khô", "Bánh giò", "Sữa chua mít", "Nem chua rán", "Trứng chén nướng", "Kem Tràng Tiền"]
+                },
+                rich: {
+                    morning: ["Phở bò đặc biệt", "Dimsum sáng", "Buffet sáng", "Bún thang Bà Đức", "Bánh mì sốt vang cao cấp"],
+                    noon: ["Cơm niêu", "Lẩu cá kèo", "Cua rang muối", "Vịt quay Bắc Kinh", "Sashimi Nhật Bản", "Bò bít tết", "Cơm gà Hải Nam"],
+                    evening: ["Lẩu ếch", "Chả cá Lã Vọng", "Buffet hải sản", "Bò nướng tảng", "Lẩu nấm Ashima", "Hải sản Quảng Ninh", "Lẩu thái Tomyum"],
+                    snack: ["Kem Ý", "Bánh ngọt cao cấp", "Trà chiều 5 sao", "Sữa chua dẻo", "Bánh crepe", "Trà sữa kem cheese"]
+                }
+            },
+            DN: {
+                cheap: {
+                    morning: ["Bánh bèo", "Bánh mì Đà Nẵng", "Bún chả cá", "Xôi gà", "Bún bò Huế", "Mì Quảng gà", "Bánh hỏi lòng heo"],
+                    noon: ["Mì Quảng", "Bánh xèo", "Cơm hến", "Cao lầu", "Bún mắm nêm", "Cơm gà Hội An", "Bún riêu cua", "Gỏi cá Nam Ô"],
+                    evening: ["Bánh tráng cuốn thịt heo", "Nem lụi", "Bún mắm nêm", "Bún thịt nướng", "Ram cuốn cải", "Lẩu bò", "Ốc trộn", "Mì trộn"],
+                    snack: ["Ốc hút", "Chè sầu Liên", "Bánh tráng kẹp", "Ram cuốn cải", "Kem bơ Cô Vân", "Yogurt muối", "Chè chuối nướng"]
+                },
+                rich: {
+                    morning: ["Điểm tâm khách sạn", "Bún bò Huế đặc biệt", "Bánh mì chảo", "Phở bò Kobe"],
+                    noon: ["Cơm niêu Nhà Đỏ", "Lẩu cá đuối", "Gà nướng cơm lam", "Hải sản ven biển", "Cơm niêu Singapore"],
+                    evening: ["Hải sản tươi sống", "Lẩu nướng BBQ", "Bò nhúng giấm", "Sashimi & Sushi", "Lẩu hơi", "Cua Hoàng Đế"],
+                    snack: ["Cafe view biển", "Sinh tố trái cây", "Bánh kem Pháp", "Trà chiều intercontinental"]
+                }
+            },
+            SG: {
+                cheap: {
+                    morning: ["Bánh mì Sài Gòn", "Hủ tiếu Nam Vang", "Bánh mì chảo", "Cơm tấm", "Bún mọc", "Hủ tiếu gõ", "Xôi mặn", "Bánh bao"],
+                    noon: ["Cơm tấm sườn bì", "Bột chiên", "Gỏi cuốn", "Bún mắm", "Bún riêu", "Cơm gà xối mỡ", "Mì vịt tiềm", "Bánh canh cua"],
+                    evening: ["Lẩu mắm", "Ốc hương", "Bún riêu cua", "Mì trộn muối ớt", "Súp cua", "Phá lấu", "Bún bò Huế", "Lẩu dê", "Hủ tiếu mực"],
+                    snack: ["Phá lấu", "Bánh tráng nướng", "Súp cua", "Gỏi khô bò", "Trà sữa túi", "Bánh tráng chấm", "Chè khúc bạch", "Chuối nếp nướng"]
+                },
+                rich: {
+                    morning: ["Dimsum cao cấp", "Breakfast kiểu Mỹ", "Bánh cuốn trứng", "Hủ tiếu cá", "Phở thố đá"],
+                    noon: ["Lẩu Haidilao", "Sushi & Sashimi", "Cơm gà Thượng Hải", "Dimsum Shifu", "Bánh canh tôm hùm"],
+                    evening: ["Steak hạng sang", "Lẩu cá dân tộc", "Buffet nướng Hàn Quốc", "Lẩu Kichi Kichi", "Hải sản Buffet", "Cơm niêu Sài Gòn"],
+                    snack: ["Bánh bingsu", "Trà sữa full topping", "Cocktail bar", "Trà chiều bánh ngọt", "Bing sô tuyết"]
+                }
+            }
+        };
+
+        // Cập nhật hàm lấy món để nhận diện 'snack'
+        function getFoods() {
+            const loc = document.getElementById('loc').value, bud = document.getElementById('bud').value, ml = document.getElementById('meal').value;
+            const buds = bud === 'all' ? ['cheap', 'rich'] : [bud], meals = ml === 'all' ? ['morning', 'noon', 'evening', 'snack'] : [ml];
+            let base = [];
+            buds.forEach(b => meals.forEach(m => { if (DB[loc]?.[b]?.[m]) base.push(...DB[loc][b][m]); }));
+            const custom = (JSON.parse(localStorage.getItem('customFoods') || '[]')).filter(c => c.city === loc && (bud === 'all' || c.budget === bud) && (ml === 'all' || c.meal === ml || c.meal === 'all')).map(c => c.name);
+            return [...new Set([...base, ...custom])].slice(0, 12);
+        }
+
+        const FOOD_DESC = {
+            "Phở bò": "Nước dùng xương hầm 12 tiếng, thịt tái chín", "Bún chả": "Chả nướng than hoa, bún tươi, rau sống", "Cơm tấm sườn bì": "Cơm tấm với sườn nướng và bì thịt", "Bánh mì": "Vỏ giòn ruột mềm, nhân phong phú",
+            "Lẩu": "Nồi lẩu thơm ngon, ăn cùng bạn bè", "Mì Quảng": "Đặc sản miền Trung, béo ngậy", "Xôi xéo": "Xôi vàng với đậu xanh và hành phi"
+        };
+
+        const MOOD_DATA = [
+            { label: "😊 Thư giãn", foods: ["Cháo", "Súp", "Bánh cuốn", "Chè"] },
+            { label: "💪 Cần năng lượng", foods: ["Cơm", "Thịt", "Phở", "Bún bò"] },
+            { label: "🌿 Ăn nhẹ", foods: ["Gỏi", "Bánh", "Cuốn", "Salad"] },
+            { label: "😴 No lâu", foods: ["Cơm", "Lẩu", "Xôi", "Bún"] },
+            { label: "🔥 Thích cay", foods: ["Lẩu", "Bún bò", "Mì cay", "Ốc"] },
+            { label: "❄️ Giải nhiệt", foods: ["Chè", "Cháo", "Gỏi cuốn", "Bánh tráng"] },
+            { label: "🎉 Đặc biệt", foods: ["Sushi", "Lẩu", "BBQ", "Hải sản", "Omakase"] },
+            { label: "⚡ Nhanh gọn", foods: ["Bánh mì", "Xôi", "Cơm rang", "Hủ tiếu"] }
+        ];
+        const TASTE_DATA = [
+            { label: "Cay 🌶", kw: ["cay", "lẩu", "Bún bò", "mì cay"] },
+            { label: "Ngọt 🍬", kw: ["chè", "ngọt", "bánh"] },
+            { label: "Mặn 🧂", kw: ["cơm", "thịt", "sườn"] },
+            { label: "Chua 🍋", kw: ["gỏi", "bún riêu", "dưa"] },
+            { label: "Béo 🧈", kw: ["lẩu", "nướng", "dimsum", "Wagyu"] },
+            { label: "Thanh mát 🌿", kw: ["gỏi cuốn", "bánh tráng cuốn", "rau"] },
+            { label: "Umami 🍄", kw: ["phở", "ramen", "súp"] },
+            { label: "Giòn 🥐", kw: ["bánh mì", "bánh bèo", "bột chiên"] }
+        ];
+        const TIMES = [{ label: "⚡ Dưới 10 phút", max: 10 }, { label: "🕐 15-30 phút", max: 30 }, { label: "🍽️ 30-60 phút", max: 60 }, { label: "🫕 Cả buổi", max: 999 }];
+        const EMOJIS_MAP = { "Phở": "🍜", "Bún": "🍜", "Cơm": "🍚", "Bánh mì": "🥖", "Lẩu": "🍜", "Hải sản": "🦐", "Sushi": "🍣", "BBQ": "🥩", "Dimsum": "🥟", "Xôi": "🍚", "Bánh": "🥞", "Gỏi": "🥗", "Ốc": "🐚", "Chả cá": "🐟", "Cháo": "🥣", "Hủ tiếu": "🍜", "Mì": "🍝", "Bò": "🥩", "Gà": "🍗", "Chè": "🍡", "Vịt": "🦆", "Tôm": "🦐", "Cua": "🦀", "Mực": "🦑" };
+
+        /* ===== STATE ===== */
+        let currentFoods = [], currentDeg = 0, pendingFood = '', pendingMeta = {}, soundOn = true;
+        let timerSeconds = 0, timerTotal = 0, timerInterval = null, timerRunning = false;
+        let activeMoods = new Set(), activeTastes = new Set(), activeTime = null, activeMeal = 'all';
+        let suggestFood = '';
+
+        /* ===== AUDIO ===== */
+        const AC = window.AudioContext || window.webkitAudioContext; let audioCtx;
+        function getAC() { if (!audioCtx) audioCtx = new AC(); return audioCtx; }
+        function playTick() { if (!soundOn) return; try { const a = getAC(), o = a.createOscillator(), g = a.createGain(); o.connect(g); g.connect(a.destination); o.frequency.value = 880; g.gain.setValueAtTime(.07, a.currentTime); g.gain.exponentialRampToValueAtTime(.001, a.currentTime + .05); o.start(); o.stop(a.currentTime + .05); } catch (e) { } }
+        function playWin() { if (!soundOn) return; try { const a = getAC();[523, 659, 784, 1047].forEach((f, i) => { const o = a.createOscillator(), g = a.createGain(); o.connect(g); g.connect(a.destination); o.frequency.value = f; const t = a.currentTime + i * .12; g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.2, t + .05); g.gain.exponentialRampToValueAtTime(.001, t + .3); o.start(t); o.stop(t + .3); }); } catch (e) { } }
+        function playDone() { if (!soundOn) return; try { const a = getAC();[440, 550, 660, 880].forEach((f, i) => { const o = a.createOscillator(), g = a.createGain(); o.connect(g); g.connect(a.destination); o.type = 'sine'; o.frequency.value = f; const t = a.currentTime + i * .15; g.gain.setValueAtTime(.25, t); g.gain.exponentialRampToValueAtTime(.001, t + .4); o.start(t); o.stop(t + .4); }); } catch (e) { } }
+
+        /* ===== THEME ===== */
+        function toggleTheme() { const d = document.documentElement, dark = d.dataset.theme === 'dark'; d.dataset.theme = dark ? 'light' : 'dark'; document.getElementById('theme-btn').textContent = dark ? '🌙' : '☀️'; localStorage.setItem('theme', d.dataset.theme); }
+        function toggleSound() { soundOn = !soundOn; localStorage.setItem('sound', soundOn ? '1' : '0'); document.getElementById('sound-btn').classList.toggle('active', soundOn); document.getElementById('sound-wave').classList.toggle('off', !soundOn); }
+
+        /* ===== TABS ===== */
+        function switchTab(id) { document.querySelectorAll(".tab-btn").forEach((b, i) => { b.classList.toggle("active", ["wheel", "suggest", "history", "timer", "custom"][i] === id) }); document.querySelectorAll(".pane").forEach(p => p.classList.remove("active")); document.getElementById("pane-" + id).classList.add("active"); if (id === "history") updateHistoryPane() }
+
+        /* ===== WHEEL ===== */
+        const COLORS = ["#FF6B6B", "#FFD93D", "#6BCB77", "#4D96FF", "#FF9FF3", "#FFA552", "#A29BFE", "#55EFC4", "#FD79A8", "#FDCB6E", "#74B9FF", "#00CEC9"];
+        function getFoodEmoji(n) { for (const k in EMOJIS_MAP) if (n.includes(k)) return EMOJIS_MAP[k]; return '🍽️'; }
+        function getFoods() { const loc = document.getElementById("loc").value, bud = document.getElementById("bud").value, ml = document.getElementById("meal").value; const buds = bud === "all" ? ["cheap", "rich"] : [bud], meals = ml === "all" ? ["morning", "noon", "evening"] : [ml]; let base = []; buds.forEach(b => meals.forEach(m => { if (DB[loc]?.[b]?.[m]) base.push(...DB[loc][b][m]) })); const custom = JSON.parse(localStorage.getItem("customFoods") || "[]").filter(c => c.city === loc && (bud === "all" || c.budget === bud) && (ml === "all" || c.meal === ml || c.meal === "all")).map(c => c.name); return [...new Set([...base, ...custom])].slice(0, 12) }
+
+        function initWheel() {
+            currentFoods = getFoods();
+            const c = document.getElementById('wheel'), ctx = c.getContext('2d'), N = currentFoods.length;
+            if (N === 0) return;
+            const sa = (2 * Math.PI) / N;
+
+            ctx.clearRect(0, 0, 300, 300); ctx.save(); ctx.translate(150, 150);
+
+            // Vẽ từ góc -90 độ (vị trí 12h)
+            const startOffset = -Math.PI / 2;
+
+            for (let i = 0; i < N; i++) {
+                const angle = startOffset + i * sa;
+                ctx.beginPath(); ctx.fillStyle = COLORS[i % COLORS.length];
+                ctx.moveTo(0, 0);
+                ctx.arc(0, 0, 148, angle, angle + sa);
+                ctx.closePath(); ctx.fill();
+
+                // Vẽ đường ngăn cách
+                ctx.save(); ctx.rotate(angle); ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(148, 0);
+                ctx.strokeStyle = 'rgba(255,255,255,0.3)'; ctx.stroke(); ctx.restore();
+
+                // Vẽ chữ
+                ctx.save(); ctx.rotate(angle + sa / 2);
+                ctx.textAlign = 'right'; ctx.fillStyle = '#fff';
+                ctx.font = "bold 12px 'Be Vietnam Pro'";
+                ctx.fillText(currentFoods[i].substring(0, 12), 135, 5);
+                ctx.restore();
+            }
+
+            // Tâm vòng quay
+            ctx.beginPath(); ctx.arc(0, 0, 15, 0, 2 * Math.PI); ctx.fillStyle = '#fff'; ctx.fill();
+            ctx.restore();
+        }
+
+        function spinWheel() {
+            if (!currentFoods.length) return;
+            const btn = document.getElementById('spin-btn');
+            btn.disabled = true; btn.textContent = 'ĐANG QUAY...';
+
+            const N = currentFoods.length;
+            const ri = Math.floor(Math.random() * N); // Chọn ngẫu nhiên chỉ số món ăn
+            const sliceDeg = 360 / N;
+            const extraSpins = 360 * 8; // Quay 8 vòng để tạo hiệu ứng
+
+            // Tính toán góc dừng:
+            // Chúng ta muốn ô thứ 'ri' dừng ở đỉnh (vị trí 0 độ của pointer)
+            // Vì ta vẽ từ 12h, nên ô 'ri' cần quay một góc ngược lại chỉ số của nó.
+            const stopDeg = 360 - (ri * sliceDeg + sliceDeg / 2);
+
+            // Cập nhật tổng góc quay (cộng dồn để vòng quay không bị giật lùi)
+            currentDeg += extraSpins + (stopDeg - (currentDeg % 360) + 360) % 360;
+
+            const cv = document.getElementById('wheel');
+            cv.style.transition = 'transform 4s cubic-bezier(0.15, 0, 0.15, 1)';
+            cv.style.transform = `rotate(${currentDeg}deg)`;
+
+            pendingFood = currentFoods[ri]; // Lưu món ăn chính xác vào biến chờ
+
+            setTimeout(() => {
+                // Play sound nếu có
+                if (window.playWin) playWin();
+
+                // Hiển thị Modal với đúng món đã chọn (pendingFood)
+                showModal(pendingFood, {
+                    city: document.getElementById('loc').value,
+                    budget: document.getElementById('bud').value
+                });
+
+                btn.disabled = false; btn.textContent = 'QUAY TIẾP!';
+                updateWheelStats(); // Cập nhật thống kê đồng bộ
+            }, 4200);
+        }
+        
+        // Hàm này sẽ tính toán mọi con số từ mảng foodHistory duy nhất
+        function updateWheelStats() {
+            const hist = JSON.parse(localStorage.getItem('foodHistory') || '[]');
+            const todayStr = new Date().toLocaleDateString('vi-VN');
+
+            // 1. Cập nhật Tổng lần quay
+            document.getElementById('sw-total').textContent = hist.length;
+
+            // 2. Cập nhật số lần quay Hôm nay
+            const todayCount = hist.filter(h => h.date === todayStr).length;
+            document.getElementById('sw-today').textContent = todayCount;
+
+            // 3. Cập nhật Món hay ăn nhất
+            const favEl = document.getElementById('sw-fav');
+            if (hist.length === 0) {
+                favEl.textContent = '—';
+            } else {
+                const counts = {};
+                hist.forEach(h => counts[h.food] = (counts[h.food] || 0) + 1);
+                const top = Object.entries(counts).sort((a, b) => b[1] - a[1])[0][0];
+                favEl.textContent = top.length > 10 ? top.slice(0, 8) + '..' : top;
+            }
+        }
+
+        // Hàm lưu dữ liệu khi bấm "Chốt"
+        function accept() {
+            saveHistory(pendingFood, pendingMeta);
+            closeModal();
+            toast('✅ Đã chốt món!');
+
+            // Cập nhật cả 2 nơi ngay lập tức
+            updateWheelStats();
+            if (typeof updateHistoryPane === 'function') updateHistoryPane();
+        }
+
+        /* ===== MODAL ===== */
+        function showModal(food, meta) {
+            document.getElementById('m-food').textContent = food;
+            document.getElementById('m-emoji').textContent = getFoodEmoji(food);
+            document.getElementById('m-meta').textContent = [meta.loc, meta.meal].filter(Boolean).join(' · ');
+            const pr = document.getElementById('m-price');
+            pr.textContent = { cheap: '🟢 Dưới 50k', rich: '🟡 Trên 100k', all: '🔵 Mọi mức giá' }[meta.bud || 'all'];
+            pr.className = 'modal-price ' + ({ cheap: 'cheap', rich: 'rich', all: 'all' }[meta.bud || 'all']);
+            document.getElementById('modal').classList.add('open');
+        }
+        function closeModal() { document.getElementById('modal').classList.remove('open'); }
+        function handleModalClick(e) { if (e.target === document.getElementById('modal')) closeModal(); }
+        function reroll() { closeModal(); setTimeout(spinWheel, 200); }
+        function shareResult(){const text=`Hôm nay mình ăn ${pendingFood} ${getFoodEmoji(pendingFood)}\n${pendingMeta.loc||""} ${pendingMeta.meal||""}\n\n#HomNayAnGi`;if(navigator.share)navigator.share({text:text}).catch(()=>{});else navigator.clipboard.writeText(text).then(()=>toast("📋 Đã copy để chia sẻ!"))}
+
+        /* ===== HISTORY ===== */
+        function saveHistory(food, meta) {
+            const hist = JSON.parse(localStorage.getItem('foodHistory') || '[]');
+            hist.unshift({ food, meta, date: new Date().toLocaleDateString('vi-VN'), ts: Date.now() });
+            if (hist.length > 100) hist.pop();
+            localStorage.setItem('foodHistory', JSON.stringify(hist));
+        }
+        function clearHistory() {
+            if (confirm('Bạn có chắc muốn xóa toàn bộ lịch sử không?')) {
+                // 1. Xóa sạch trong LocalStorage
+                localStorage.removeItem('foodHistory');
+
+                // 2. Nếu bạn có dùng biến toàn cầu để lưu lịch sử, hãy reset nó
+                // Ví dụ nếu trong code có: let history = ...
+                if (typeof history !== 'undefined') history = [];
+
+                // 3. Cập nhật lại toàn bộ UI
+                updateHistoryPane(); // Vẽ lại danh sách (sẽ thành trống)
+                updateWheelStats();  // Đưa các con số Tổng/Hôm nay về 0
+
+                toast('🧹 Đã xóa sạch lịch sử!');
+            }
+        }
+        function calcStreak(hist) {
+            if (!hist.length) return 0; const days = [...new Set(hist.map(h => h.date))]; if (days.length <= 1) return days.length;
+            let s = 1; for (let i = 0; i < days.length - 1; i++) { const d1 = new Date(hist.find(h => h.date === days[i]).ts), d2 = new Date(hist.find(h => h.date === days[i + 1]).ts); if ((d1 - d2) < 2 * 24 * 60 * 60 * 1000) s++; else break; } return s;
+        }
+        function updateHistoryPane() {
+            const hist = JSON.parse(localStorage.getItem('foodHistory') || '[]');
+            document.getElementById('h-total').textContent = hist.length;
+            document.getElementById('h-unique').textContent = new Set(hist.map(h => h.food)).size;
+            const streak = calcStreak(hist); document.getElementById('h-streak').textContent = streak;
+            const sa = document.getElementById('streak-area');
+            sa.innerHTML = streak >= 3 ? `<div class="streak-banner"><div class="streak-num">🔥${streak}</div><div><div class="streak-title">Streak ${streak} ngày!</div><div class="streak-sub">Đang duy trì thói quen ăn đa dạng!</div></div></div>` : '';
+            const freq = {}; hist.forEach(h => { freq[h.food] = (freq[h.food] || 0) + 1; });
+            const top = Object.entries(freq).sort((a, b) => b[1] - a[1]).slice(0, 5);
+            const fc = document.getElementById('freq-chart');
+            fc.innerHTML = top.length ? top.map(([f, n]) => `<div class="freq-row"><div class="freq-name" title="${f}">${f}</div><div class="freq-bar-wrap"><div class="freq-bar" style="width:${Math.round(n / top[0][1] * 100)}%"></div></div><div class="freq-count">${n}</div></div>`).join('') : '<div class="empty"><div class="empty-icon">📊</div>Chưa có dữ liệu</div>';
+            const hl = document.getElementById('history-list');
+            hl.innerHTML = hist.length ? hist.slice(0, 15).map(h => `<div class="history-item"><div class="history-icon">${getFoodEmoji(h.food)}</div><div class="history-info"><div class="history-name">${h.food}</div><div class="history-sub">${h.meta?.loc || ''}${h.meta?.meal ? ' · ' + h.meta.meal : ''}</div></div><div class="history-badge">${h.date}</div></div>`).join('') : '<div class="empty"><div class="empty-icon">🍽️</div>Chưa có món nào được chốt</div>';
+        }
+
+        /* ===== SUGGEST ===== */
+        let sgMeal = 'all';
+        function selectMeal(el, val) { document.querySelectorAll('.meal-card').forEach(c => c.classList.remove('active')); el.classList.add('active'); sgMeal = val; }
+        function initChips() {
+            const mc = document.getElementById('mood-chips'), tc = document.getElementById('taste-chips'), tmc = document.getElementById('time-chips');
+            MOOD_DATA.forEach(m => { const b = document.createElement('button'); b.className = 'chip mood-chip'; b.textContent = m.label; b.onclick = () => { b.classList.toggle('active'); activeMoods.has(m.label) ? activeMoods.delete(m.label) : activeMoods.add(m.label); }; mc.appendChild(b); });
+            TASTE_DATA.forEach(t => { const b = document.createElement('button'); b.className = 'chip taste-chip'; b.textContent = t.label; b.onclick = () => { b.classList.toggle('active'); activeTastes.has(t.label) ? activeTastes.delete(t.label) : activeTastes.add(t.label); }; tc.appendChild(b); });
+            TIMES.forEach(t => { const b = document.createElement('button'); b.className = 'chip time-chip'; b.textContent = t.label; b.onclick = () => { document.querySelectorAll('.time-chip').forEach(c => c.classList.remove('active')); b.classList.add('active'); activeTime = t; }; tmc.appendChild(b); });
+        }
+        function suggest() {
+            const loc = document.getElementById('loc').value;
+            const buds = ['cheap', 'rich'], meals = sgMeal === 'all' ? ['morning', 'noon', 'evening'] : [sgMeal];
+            let pool = [];
+            buds.forEach(b => meals.forEach(m => { if (DB[loc]?.[b]?.[m]) pool.push(...DB[loc][b][m]); }));
+            /* filter by mood keywords */
+            if (activeMoods.size) {
+                const moodKw = []; activeMoods.forEach(ml => { const md = MOOD_DATA.find(m => m.label === ml); if (md) moodKw.push(...md.foods); });
+                const filtered = pool.filter(f => moodKw.some(k => f.includes(k)));
+                if (filtered.length) pool = filtered;
+            }
+            /* filter by taste */
+            if (activeTastes.size) {
+                const tasteKw = []; activeTastes.forEach(tl => { const td = TASTE_DATA.find(t => t.label === tl); if (td) tasteKw.push(...td.kw); });
+                const filtered = pool.filter(f => tasteKw.some(k => f.toLowerCase().includes(k.toLowerCase())));
+                if (filtered.length) pool = filtered;
+            }
+            const pick = [...new Set(pool)][Math.floor(Math.random() * pool.length)] || pool[0] || 'Phở bò';
+            suggestFood = pick;
+            const tags = [];
+            activeMoods.forEach(m => tags.push(m.split(' ').slice(1).join(' ')));
+            activeTastes.forEach(t => tags.push(t.split(' ')[0]));
+            if (activeTime) tags.push(activeTime.label.split(' ').slice(1).join(' '));
+            const desc = FOOD_DESC[Object.keys(FOOD_DESC).find(k => pick.includes(k)) || ''] || 'Món ngon được gợi ý cho bạn hôm nay';
+            const hero = document.getElementById('suggest-hero');
+            hero.innerHTML = `
+    <span class="sg-emoji-big">${getFoodEmoji(pick)}</span>
+    <div class="sg-food-name">${pick}</div>
+    <div class="sg-food-desc">${desc}</div>
+    ${tags.length ? `<div class="sg-tags">${tags.map(t => `<span class="sg-tag">${t}</span>`).join('')}</div>` : ''}
+    <div class="sg-actions">
+      <button class="sg-btn" onclick="suggest()">🎲 Đổi món</button>
+      <button class="sg-btn primary" onclick="acceptSuggest()">✓ Chốt!</button>
+    </div>`;
+        }
+        function acceptSuggest() {
+            if (!suggestFood) return;
+            saveHistory(suggestFood, { loc: 'Gợi ý', bud: 'all', meal: '' });
+            confetti(); toast('✅ Đã chốt: ' + suggestFood);
+            updateHistoryPane(); updateWheelStats();
+        }
+
+        /* ===== TIMER ===== */
+        function setTimer(min, btn) {
+            timerTotal = min * 60; timerSeconds = min * 60;
+            document.getElementById('timer-display').textContent = fmt(timerSeconds);
+            document.getElementById('timer-label').textContent = `Hẹn giờ ${min} phút`;
+            document.getElementById('timer-bar').style.width = '100%';
+            document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+            if (timerRunning) resetTimer();
+        }
+        function fmt(s) { return `${String(Math.floor(s / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}`; }
+        function startTimer() {
+            if (!timerSeconds) return; timerRunning = true;
+            document.getElementById('timer-start-btn').disabled = true;
+            document.getElementById('timer-pause-btn').disabled = false;
+            timerInterval = setInterval(() => {
+                timerSeconds--;
+                document.getElementById('timer-display').textContent = fmt(timerSeconds);
+                if (timerTotal > 0) document.getElementById('timer-bar').style.width = `${Math.round(timerSeconds / timerTotal * 100)}%`;
+                if (timerSeconds <= 0) {
+                    clearInterval(timerInterval); timerRunning = false;
+                    document.getElementById('timer-display').textContent = '🎉 Xong!';
+                    document.getElementById('timer-start-btn').disabled = false;
+                    document.getElementById('timer-pause-btn').disabled = true;
+                    document.getElementById('timer-label').textContent = 'Món đã sẵn sàng!';
+                    document.getElementById('timer-bar').style.width = '0%';
+                    playDone(); toast('⏰ Hết giờ! Món ăn đã sẵn sàng!');
+                }
+            }, 1000);
+        }
+        function pauseTimer() { clearInterval(timerInterval); timerRunning = false; document.getElementById('timer-start-btn').disabled = false; document.getElementById('timer-pause-btn').disabled = true; }
+        function resetTimer() { clearInterval(timerInterval); timerRunning = false; timerSeconds = timerTotal; document.getElementById('timer-display').textContent = fmt(timerSeconds); document.getElementById('timer-bar').style.width = '100%'; document.getElementById('timer-start-btn').disabled = false; document.getElementById('timer-pause-btn').disabled = true; }
+        function copyNote() { const n = document.getElementById('order-note').value; if (!n) { toast('⚠️ Ghi chú trống!'); return; } navigator.clipboard.writeText(n).then(() => toast('📋 Đã copy ghi chú!')); }
+        function shareOrder() { const food = pendingFood || suggestFood || '(chưa chọn)'; const note = document.getElementById('order-note').value; const text = `Đặt món: ${food}\n${note ? 'Ghi chú: ' + note : ''}`; if (navigator.share) navigator.share({ text }).catch(() => { }); else navigator.clipboard.writeText(text).then(() => toast('📋 Đã copy thông tin đặt món!')); }
+
+        /* ===== CUSTOM ===== */
+        function addCustomFood() {
+            const n = document.getElementById('custom-name').value.trim(); if (!n) { toast('⚠️ Nhập tên món!'); return; }
+            const city = document.getElementById('custom-city').value, budget = document.getElementById('custom-budget').value, meal = document.getElementById('custom-meal').value;
+            const list = JSON.parse(localStorage.getItem('customFoods') || '[]');
+            list.push({ name: n, city, budget, meal }); localStorage.setItem('customFoods', JSON.stringify(list));
+            document.getElementById('custom-name').value = ''; renderCustomList(); initWheel(); toast('✅ Đã thêm: ' + n);
+        }
+        function removeCustom(i) { const list = JSON.parse(localStorage.getItem('customFoods') || '[]'); list.splice(i, 1); localStorage.setItem('customFoods', JSON.stringify(list)); renderCustomList(); initWheel(); }
+        function renderCustomList() {
+            const list = JSON.parse(localStorage.getItem('customFoods') || '[]');
+            const el = document.getElementById('custom-list');
+            el.innerHTML = list.length ? '<div style="display:flex;flex-wrap:wrap;margin:-3px;">' + list.map((c, i) => `<div class="food-chip">${getFoodEmoji(c.name)} ${c.name} <span style="font-size:10px;color:var(--text3);">${c.city}</span><button class="chip-x" onclick="removeCustom(${i})">×</button></div>`).join('') + '</div>' : '<div class="empty"><div class="empty-icon">✏️</div>Chưa có món tùy chỉnh</div>';
+        }
+        function exportData() {
+            const data = { history: JSON.parse(localStorage.getItem('foodHistory') || '[]'), custom: JSON.parse(localStorage.getItem('customFoods') || '[]'), stats: JSON.parse(localStorage.getItem('spinStats') || '{}') };
+            const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })); a.download = 'hom-nay-an-gi-data.json'; a.click(); toast('⬇ Đã xuất dữ liệu!');
+        }
+        function importData(e) {
+            const f = e.target.files[0]; if (!f) return; const r = new FileReader();
+            r.onload = ev => { try { const d = JSON.parse(ev.target.result); if (d.history) localStorage.setItem('foodHistory', JSON.stringify(d.history)); if (d.custom) localStorage.setItem('customFoods', JSON.stringify(d.custom)); if (d.stats) localStorage.setItem('spinStats', JSON.stringify(d.stats)); renderCustomList(); updateHistoryPane(); updateWheelStats(); initWheel(); toast('⬆ Đã nhập dữ liệu!'); } catch (err) { toast('❌ File không hợp lệ!'); } };
+            r.readAsText(f); e.target.value = '';
+        }
+
+        /* ===== WEATHER ===== */
+        function getWeather() {
+            if (!navigator.geolocation) { setWeatherFallback(); return; }
+            navigator.geolocation.getCurrentPosition(pos => {
+                const { latitude: lat, longitude: lon } = pos.coords;
+                fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&timezone=auto`)
+                    .then(r => r.json()).then(d => {
+                        const w = d.current_weather, temp = Math.round(w.temperature), code = w.weathercode;
+                        let emoji = '☀️', desc = `Nắng đẹp, ${temp}°C`, suggest = 'Ăn gì cũng ngon hôm nay!';
+                        if (code >= 80) { emoji = '⛈️'; desc = `Mưa to, ${temp}°C`; suggest = 'Trời mưa to → Lẩu, bún bò, cháo nóng!'; }
+                        else if (code >= 61) { emoji = '🌧️'; desc = `Có mưa, ${temp}°C`; suggest = 'Thời tiết mưa → Cháo, súp, đồ ăn nóng!'; }
+                        else if (code >= 1) { emoji = '⛅'; desc = `Có mây, ${temp}°C`; suggest = 'Thời tiết mát → Ăn gì cũng được!'; }
+                        if (temp >= 35) { emoji = '🥵'; desc = `Nóng ${temp}°C`; suggest = 'Trời nóng → Cháo trắng, đồ mát, tránh dầu mỡ!'; }
+                        else if (temp <= 20) { emoji = '🥶'; desc = `Lạnh ${temp}°C`; suggest = 'Trời lạnh → Lẩu, cháo, bún bò nóng hổi!'; }
+                        document.getElementById('w-emoji').textContent = emoji;
+                        document.getElementById('w-loc').textContent = 'Vị trí của bạn';
+                        document.getElementById('w-desc').textContent = desc;
+                        document.getElementById('w-suggest').textContent = '💡 ' + suggest;
+                    }).catch(setWeatherFallback);
+            }, setWeatherFallback);
+        }
+        function setWeatherFallback() {
+            document.getElementById('w-emoji').textContent = '🌤️';
+            document.getElementById('w-loc').textContent = 'Không xác định được thời tiết';
+            document.getElementById('w-desc').textContent = 'Hôm nay ăn gì nhỉ?';
+            document.getElementById('w-suggest').textContent = 'Nhấn để lọc món theo thời tiết';
+        }
+        function applyWeatherFilter() {
+            const s = document.getElementById('w-suggest').textContent;
+            if (s.includes('lạnh') || s.includes('mưa')) { document.getElementById('meal').value = 'evening'; }
+            initWheel(); switchTab('wheel'); toast('🌤 Đã lọc món theo thời tiết!');
+        }
+
+        /* ===== CONFETTI ===== */
+        function confetti() {
+            const cols = ['#FF4D1C', '#FF8C42', '#FFD700', '#4D96FF', '#6BCB77', '#FF9FF3', '#A29BFE'];
+            for (let i = 0; i < 30; i++) {
+                const el = document.createElement('div'); el.className = 'confetti-piece';
+                el.style.cssText = `left:${15 + Math.random() * 70}%;top:20%;background:${cols[i % cols.length]};animation-delay:${Math.random() * .4}s;animation-duration:${1.2 + Math.random() * .8}s;border-radius:${Math.random() > .5 ? '50%' : '3px'};width:${6 + Math.random() * 8}px;height:${6 + Math.random() * 8}px;`;
+                document.body.appendChild(el); setTimeout(() => el.remove(), 2500);
+            }
+        }
+
+        /* ===== TOAST ===== */
+        function toast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove('show'), 2800); }
+
+        /* ===== INFO ===== */
+        function showInfo() { alert('🍜 Hôm Nay Ăn Gì?\n\n🎡 Quay: Chọn thành phố, ngân sách, bữa ăn rồi bấm Quay!\n💡 Gợi ý: Chọn tâm trạng & vị khẩu vị để nhận gợi ý thông minh\n📊 Lịch sử: Thống kê + streak các ngày đã ăn\n⏱ Đặt giờ: Hẹn giờ nhận đơn, ghi chú giao hàng\n✏️ Tùy chỉnh: Thêm món riêng + import/export\n🌤 Thời tiết: Tự động gợi ý món theo thời tiết thực tế\n\nMẹo: Nhấn vào thanh thời tiết để lọc món!'); }
+
+        /* ===== INIT ===== */
+        (function () {
+            const t = localStorage.getItem('theme'); if (t) { document.documentElement.dataset.theme = t; document.getElementById('theme-btn').textContent = t === 'dark' ? '☀️' : '🌙'; }
+            if (localStorage.getItem('sound') === '0') { soundOn = false; document.getElementById('sound-btn').classList.remove('active'); document.getElementById('sound-wave').classList.add('off'); }
+            initWheel(); initChips(); updateWheelStats(); updateHistoryPane(); renderCustomList(); getWeather();
+        })();
+
+        /* ===== Devpan ===== */
+        // const hasMeta = !!document.querySelector('meta[name="author"][content="Devpan"]');if (!hasMeta) {document.body.innerHTML = "";}
+        // const veras = document.getElementById("Devpan");if (!veras) { location.href = atob("aHR0cHM6Ly9kZXZwYW4udmVyY2VsLmFwcC8=");}
+        // const panbap = atob("cGFuYmFwLmdpdGh1Yi5pbw==");if (location.hostname !== panbap) {document.body.innerHTML = "";}
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Devpan">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lovely - nơi chia sẻ tình yêu thương.">
+  <meta name="keywords" content="lập trình, thiết kế web, javascript, html, css">
+
+  <title>Galaxy love 2.0</title>
+  <link rel="icon" href="./assets/a/icon1.png" type="image/png">
+  <link rel="stylesheet" href="./assets/css/galaxyz.css" type="text/css" media="all" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <!-- <script type="text/javascript" src="./assets/js/keypan.js" onerror="alert('Không tải được')"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/panbapz/js/file/dp.min.js"></script>  
+  <!-- <script type="text/javascript" src="./assets/js/scripts.js" onerror="alert('Không tải được')"></script> -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
+        "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.152.2/examples/jsm/controls/OrbitControls.js",
+        "three/examples/jsm/loaders/FontLoader.js": "https://unpkg.com/three@0.152.2/examples/jsm/loaders/FontLoader.js",
+        "three/examples/jsm/geometries/TextGeometry.js": "https://unpkg.com/three@0.152.2/examples/jsm/geometries/TextGeometry.js"
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div id="container">
+    <div id="landscape-warning">
+      <div class="warning-content">
+        <div class="rotate-icon"></div>
+        <h1>Galaxy love</h1>
+        <p style="font-size: 0.6em;">Cậu hãy xoay ngang màn hình nha!</p>
+        <p style="font-size: 0.6em;">Nhớ chạm vào tinh cầu ở giữa để mở quà bí mật.</p>
+        <div class="stars-bg"></div>
+      </div>
+    </div>
+    <div id="dark-overlay"></div>
+    <div id="info"></div>
+  </div>
+
+  <dev id="Devpan"></dev>
+
+  <script>
+
+    // (function(v1, v2) {
+    //     const v3 = v1();
+    //     while (true) {
+    //         try {
+    //             const v4 = -parseInt("538xqPTIt") / 1 * (parseInt("202ezIonq") / 2) + -parseInt("807jOzdsu") / 3 * (-parseInt("8452RbqyhV") / 4) + parseInt("2123985MYOwnp") / 5 + -parseInt("60ZGzTET") / 6 * (-parseInt("367262ksnRIk") / 7) + parseInt("1145720RdnxwD") / 8 + parseInt("908478EkLRET") / 9 * (parseInt("20LRMNHF") / 10) + parseInt("15679499ImZnYK") / 11 * (-parseInt("12abxWOd") / 12);
+    //             if (v4 === v2) break;
+    //             else v3.push(v3.shift());
+    //         } catch (v5) {
+    //             v3.push(v3.shift());
+    //         }
+    //     }
+    // }(v6, 383206));
+
+    function setFullScreen() {
+        const v7 = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', v7 + 'px');
+        const containerEl = document.getElementById('container');
+        containerEl && (containerEl.style.height = window.innerHeight + 'px');
+    }
+    window.addEventListener("resize", setFullScreen), window.addEventListener("orientationchange", () => {
+        setTimeout(setFullScreen, 300);
+    }), setFullScreen();
+    const preventDefault = v8 => v8.preventDefault();
+    document.addEventListener('touchmove', preventDefault, {
+        'passive': false
+    }), document.addEventListener('gesturestart', preventDefault, {
+        'passive': false
+    });
+    const container = document.getElementById('container');
+    container && container.addEventListener('touchmove', preventDefault, {
+        'passive': false
+    });
+
+    function checkOrientation() {
+        const v9 = window.innerHeight > window.innerWidth && 'ontouchstart' in window;
+        v9 ? document.body.classList.add("portrait-mode") : document.body.classList.remove('portrait-mode');
+    }
+    window.addEventListener("DOMContentLoaded", checkOrientation), window.addEventListener("resize", checkOrientation), window.addEventListener("orientationchange", () => {
+        setTimeout(checkOrientation, 200);
+    });
+    const script = document.createElement('script');
+    script.type = "module", script.src = './assets/js/galaxyz.js?v=' + new Date().getTime(), document.head.appendChild(script);
+    const img = new Image();
+
+
+    img.src = atob('Li9hc3NldHMvZXJyL2dhbGF4eXoucG5n') /* => "./assets/err/galaxyz.png" */ , img.style.display = 'none', img.onload = () => Object.assign(img.style, {
+        'display': "block",
+        'maxWidth': '100%',
+        'height': 'auto'
+    }), img.onerror = () => {
+        const canvasEl = document.createElement('canvas'),
+            ctx = canvasEl.getContext('2d'),
+            handler = () => {
+
+                canvasEl.width = innerWidth, canvasEl.height = innerHeight, ctx.fillStyle = 'rgba(20,\x2020,\x2020,\x200.97)', ctx.fillRect(0, 0, canvasEl.width, canvasEl.height), ctx.fillStyle = "#fff", ctx.font = "bold 48px Arial, sans-serif", ctx.textAlign = "center", ctx.textBaseline = 'middle', ctx.fillText(new TextDecoder().decode(Uint8Array.from(atob('SOG7hyB0aOG7kW5nIMSRYW5nIGLhuqNvIHRyw6w=') /* => "Hệ thống đang bảo trì" */ , v10 => v10.charCodeAt(0))), canvasEl.width / 2, canvasEl.height / 2);
+            };
+        window.onresize = handler, handler(), Object.assign(canvasEl.style, {
+            'position': 'fixed',
+            'inset': 0,
+            'zIndex': 9999
+        }), document.body.appendChild(canvasEl);
+    };
+    // }, window.addEventListener('load', () => {
+    //     const v11 = atob("bG92ZWNvZGVzMi52ZXJjZWwuYXBw") /* => "lovecodes2.vercel.app" */ ;
+    //     location.hostname !== v11 && (document.body.innerHTML = '');
+    // });
+    // if (!document.querySelector("meta[name=\"author\"][content=\"Devpan\"]")) document.body.innerHTML = '';
+    // if (!document.getElementById('Devpan')) location.href = atob('aHR0cHM6Ly9kZXZwYW4udmVyY2VsLmFwcC8=') /* => "https://devpan.vercel.app/" */ ;
+
+
+    // document.addEventListener('keydown', function(event) {
+
+    //     (event.key === "F12" || event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J') || event.ctrlKey && event.key === 'U') && (event.preventDefault(), location = atob('aHR0cHM6Ly9kZXZwYW4udmVyY2VsLmFwcA==') /* => "https://devpan.vercel.app" */ );
+    // }), document.addEventListener('contextmenu', function(event2) {
+    //     event2.preventDefault();
+    // }), document.addEventListener("selectstart", event3 => event3.preventDefault()), document.addEventListener("contextmenu", event4 => event4.preventDefault());
+
+  </script>
+
+</body>
+
+</html>
